@@ -3,24 +3,41 @@ document.addEventListener('DOMContentLoaded', () => {
   // ── LOADER ────────────────────────────────────────────────
   const loader = document.getElementById('loader');
   const loaderBar = document.getElementById('loaderBar');
+  const loaderFill = document.getElementById('loaderFill');
   
   let progress = 0;
+  
+  // Failsafe: se si blocca sblocchiamo comunque dopo 3 secondi
+  const failsafe = setTimeout(() => {
+    hideLoader();
+  }, 3000);
+
   const loadInterval = setInterval(() => {
-    progress += Math.random() * 15 + 5;
+    progress += Math.random() * 12 + 3; // Random steps
     if (progress >= 100) {
       progress = 100;
       clearInterval(loadInterval);
-      loaderBar.style.width = '100%';
+      clearTimeout(failsafe);
       
-      setTimeout(() => {
-        loader.classList.add('hidden');
-        document.body.style.overflow = 'auto'; // Re-enable scrolling
-      }, 400);
+      if(loaderBar) loaderBar.style.height = '100%';
+      if(loaderFill) loaderFill.style.width = '100%';
+      
+      setTimeout(hideLoader, 600);
     } else {
-      loaderBar.style.width = progress + '%';
+      if(loaderBar) loaderBar.style.height = progress + '%';
+      if(loaderFill) loaderFill.style.width = progress + '%';
     }
-  }, 50);
+  }, 60);
 
+  function hideLoader() {
+    if(!loader) return;
+    loader.classList.add('hidden');
+    document.body.style.overflow = ''; // Re-enable scrolling
+    setTimeout(() => {
+      loader.remove(); // Completamente rimosso dal DOM per evitare blocchi
+    }, 1000);
+  }
+  
   // Stop scrolling while loading
   document.body.style.overflow = 'hidden';
 
