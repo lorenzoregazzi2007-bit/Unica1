@@ -3,102 +3,110 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Loribank — Sviluppatore & Creator Tecnologico</title>
-<meta name="description" content="Portfolio futuristico: AI, sviluppo software, automazione e innovazione.">
+<title>Loribank — Portfolio</title>
+<meta name="description" content="Portfolio di Sviluppo Software e Design.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <!-- LOADER -->
 <div id="loader">
-  <div class="loader-inner">
-    <div class="loader-bar"><div class="loader-fill"></div></div>
-    <div class="loader-text">INIZIALIZZAZIONE SISTEMA<span class="blink">_</span></div>
-    <div class="loader-percent" id="loaderPercent">0%</div>
+  <div class="loader-content">
+    <div class="loader-logo">LORIBANK</div>
+    <div class="loader-bar-container">
+      <div class="loader-bar" id="loaderBar"></div>
+    </div>
   </div>
 </div>
 
-<!-- CANVAS BACKGROUND -->
-<canvas id="bgCanvas"></canvas>
+<!-- BG MESH -->
+<div class="bg-gradient"></div>
 
 <!-- NAV -->
 <nav id="nav">
-  <div class="nav-logo">LORIBANK<span class="dot">.</span></div>
-  <div class="nav-links">
-    <a href="#about">Chi sono</a>
-    <a href="#projects">Progetti</a>
-    <a href="#ai">AI</a>
-    <a href="#timeline">Timeline</a>
-    <a href="#wall">Wall</a>
+  <div class="nav-container">
+    <div class="nav-logo">LORIBANK</div>
+    <div class="nav-links">
+      <a href="#about">Chi Sono</a>
+      <a href="#projects">Lavori</a>
+      <a href="#process">Metodo</a>
+      <a href="#timeline">Percorso</a>
+    </div>
   </div>
-  <div class="nav-status"><span class="status-dot"></span>ONLINE</div>
 </nav>
 
 <!-- HERO -->
 <section id="hero">
-  <div class="hero-content">
-    <div class="hero-badge">CAPOLAVORO — MATURITÀ 2026</div>
-    <h1 class="hero-title">
-      <span class="line" data-text="Ho trasformato">Ho trasformato</span>
-      <span class="line accent" data-text="idee in progetti">idee in progetti</span>
-      <span class="line" data-text="reali.">reali.</span>
+  <div class="hero-container">
+    <div class="badge reveal">MATURITÀ 2026</div>
+    <h1 class="hero-title reveal-delay-1">
+      Sviluppo idee in<br>
+      <span class="text-gradient">esperienze digitali.</span>
     </h1>
-    <p class="hero-sub">Usando AI, creatività e sviluppo software.</p>
-    <div class="hero-tags">
-      <span>Intelligenza Artificiale</span>
-      <span>Sviluppo Web</span>
-      <span>Automazione</span>
-      <span>Design</span>
+    <p class="hero-sub reveal-delay-2">
+      Unisco ingegneria del software, intelligenza artificiale e design<br>
+      per creare strumenti professionali e prodotti reali.
+    </p>
+    <div class="hero-actions reveal-delay-3">
+      <a href="#projects" class="btn btn-primary">Esplora i Lavori</a>
+      <a href="#about" class="btn btn-secondary">Scopri di più</a>
     </div>
-    <button class="hero-cta" id="heroCta">Esplora i miei lavori <span class="arrow">↓</span></button>
-  </div>
-  <div class="hero-visual">
-    <div class="orb orb1"></div>
-    <div class="orb orb2"></div>
-    <div class="orb orb3"></div>
-    <div class="floating-card fc1"><span class="fc-icon">⚡</span><span>24+ Progetti</span></div>
-    <div class="floating-card fc2"><span class="fc-icon">🤖</span><span>AI-Powered</span></div>
-    <div class="floating-card fc3"><span class="fc-icon">🏍️</span><span>Moto Tech</span></div>
   </div>
 </section>
 
 <!-- ABOUT -->
 <section id="about">
-  <div class="section-label">// 01 — CHI SONO</div>
-  <div class="about-grid">
-    <div class="about-text">
-      <h2 class="section-title reveal">Sviluppatore.<br><span class="accent">Creator. Innovatore.</span></h2>
-      <p class="about-p reveal">Non ho aspettato di finire la scuola per iniziare a costruire. Mentre studiavo, progettavo app reali, automatizzavo processi industriali e vendevo i miei lavori.</p>
-      <p class="about-p reveal">La mia passione unisce due mondi apparentemente distanti: la potenza grezza delle moto e la precisione del codice. In entrambi, cerco l'eccellenza.</p>
-      <div class="about-stats reveal">
-        <div class="stat"><div class="stat-num" data-target="24">0</div><div class="stat-label">Progetti</div></div>
-        <div class="stat"><div class="stat-num" data-target="6">0</div><div class="stat-label">Venduti</div></div>
-        <div class="stat"><div class="stat-num" data-target="3">0</div><div class="stat-label">Anni di sviluppo</div></div>
-        <div class="stat"><div class="stat-num" data-target="100">0</div><div class="stat-label">% Autodidatta</div></div>
-      </div>
+  <div class="container">
+    <div class="section-header reveal">
+      <h2 class="section-title">Chi Sono.</h2>
+      <p class="section-desc">Non aspetto di finire la scuola per iniziare a costruire.</p>
     </div>
-    <div class="about-skills reveal">
-      <div class="skill-card">
-        <div class="skill-icon">🤖</div>
-        <div class="skill-name">Intelligenza Artificiale</div>
-        <div class="skill-desc">Prompt engineering avanzato, integrazione API, automazione AI-driven</div>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>Il mio percorso nasce dalla curiosità. Ho imparato a programmare per risolvere problemi concreti, sviluppando applicazioni reali prima ancora di studiarle a scuola.</p>
+        <p>Unisco mondi diversi: l'ingegneria e i motori con la precisione del codice. Ogni mio progetto è guidato dall'obiettivo di creare qualcosa di elegante, funzionale e pronto per il mercato.</p>
+        
+        <div class="stats-row">
+          <div class="stat-box">
+            <div class="stat-number">24+</div>
+            <div class="stat-label">Progetti completati</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Codice scritto o orchestrato</div>
+          </div>
+        </div>
       </div>
-      <div class="skill-card">
-        <div class="skill-icon">💻</div>
-        <div class="skill-name">Sviluppo Software</div>
-        <div class="skill-desc">Web app, tool CLI, dashboard, simulatori, PWA</div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon">🏍️</div>
-        <div class="skill-name">Moto & Tech</div>
-        <div class="skill-desc">App di manutenzione, tracking, diagnostica avanzata</div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon">⚙️</div>
-        <div class="skill-name">Automazione PLC</div>
-        <div class="skill-desc">Siemens LOGO!, IEC 61131-3, logica ladder AI-generata</div>
+      <div class="about-skills reveal">
+        <div class="skill-item">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+          </div>
+          <div>
+            <h3>Sviluppo Software</h3>
+            <p>Web app, PWA, dashboard interattive.</p>
+          </div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
+          </div>
+          <div>
+            <h3>AI Integration</h3>
+            <p>Automazione, agenti autonomi, accelerazione dello sviluppo.</p>
+          </div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+          </div>
+          <div>
+            <h3>Automazione Industriale</h3>
+            <p>Sistemi di logica PLC e automazione hardware (Siemens).</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -106,290 +114,246 @@
 
 <!-- PROJECTS -->
 <section id="projects">
-  <div class="section-label">// 02 — SHOWCASE PROGETTI</div>
-  <h2 class="section-title center reveal">I miei lavori <span class="accent">migliori</span></h2>
-  <p class="section-sub reveal">Ogni progetto è una soluzione reale a un problema reale.</p>
+  <div class="container">
+    <div class="section-header reveal">
+      <h2 class="section-title">Lavori In Evidenza.</h2>
+      <p class="section-desc">Strumenti reali creati per risolvere problemi concreti. Seleziona un progetto per esplorarlo.</p>
+    </div>
 
-  <div class="projects-grid" id="projectsGrid">
-
-    <div class="proj-card featured reveal" data-cat="moto">
-      <div class="proj-glow"></div>
-      <div class="proj-header">
-        <div class="proj-cat">🏍️ MOTO TECH</div>
-        <div class="proj-badge">FEATURED</div>
-      </div>
-      <h3 class="proj-title">WRF Maintenance App</h3>
-      <p class="proj-desc">App professionale per il tracking della manutenzione della Yamaha WR450F. Ore motore, intervalli predittivi, sincronizzazione Firebase cloud, PWA mobile-first.</p>
-      <div class="proj-problem"><span>Problema:</span> Nessuno strumento dedicato per moto enduro da competizione</div>
-      <div class="proj-result"><span>Risultato:</span> App live su GitHub Pages, usata ogni giorno in pista</div>
-      <div class="proj-tech">
-        <span>Firebase</span><span>PWA</span><span>JavaScript</span><span>GitHub Pages</span>
-      </div>
-      <div class="proj-mockup moto-mockup">
-        <div class="mock-screen">
-          <div class="mock-header">WRF MAINTENANCE <span class="mock-dot green"></span></div>
-          <div class="mock-row"><span>Ore Motore</span><span class="mock-val">247h</span></div>
-          <div class="mock-row"><span>Prossima manutenzione</span><span class="mock-val warn">3h</span></div>
-          <div class="mock-row"><span>Firebase Sync</span><span class="mock-val green">LIVE</span></div>
-          <div class="mock-bar"><div class="mock-fill" style="width:82%"></div></div>
+    <div class="projects-list">
+      
+      <!-- Dominvs BJJ -->
+      <div class="project-row reveal">
+        <div class="project-info">
+          <div class="project-meta">
+            <span class="tag">Web & SEO</span>
+            <span class="tag tag-gold">VENDUTO</span>
+          </div>
+          <h3 class="project-name">Dominvs BJJ Website</h3>
+          <p class="project-desc">Sito professionale per un'accademia di Jiu Jitsu. Sviluppato con focus su performance, SEO avanzato per sedi multiple e design premium.</p>
+          <div class="project-tech">HTML • CSS • SEO • GitHub Pages</div>
+          <a href="https://loribank.github.io/DominvsBjj" target="_blank" class="btn btn-outline">Visita il Sito <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg></a>
+        </div>
+        <div class="project-visual">
+          <div class="mockup-browser">
+            <div class="mockup-header">
+              <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+              <div class="mockup-url">dominvsbjj.it</div>
+            </div>
+            <div class="mockup-body" style="background:#000; display:flex; align-items:center; justify-content:center; flex-direction:column; color:#fff;">
+              <h4 style="font-weight:700; letter-spacing:2px; font-size:18px;">DOMINVS BJJ</h4>
+              <p style="font-size:10px; color:#888; margin-top:8px;">ACCADEMIA JIU JITSU</p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="proj-card reveal" data-cat="ai">
-      <div class="proj-glow"></div>
-      <div class="proj-header">
-        <div class="proj-cat">🤖 AI TOOL</div>
-        <div class="proj-badge sold">VENDUTO</div>
+      <!-- WRF Maintenance -->
+      <div class="project-row reveal">
+        <div class="project-info">
+          <div class="project-meta">
+            <span class="tag">Mobile Web App</span>
+          </div>
+          <h3 class="project-name">WRF Maintenance App</h3>
+          <p class="project-desc">Un'applicazione PWA completa per tracciare la manutenzione della Yamaha WR450F. Gestione ore motore, log storici, cloud sync via Firebase.</p>
+          <div class="project-tech">JavaScript • Firebase • PWA</div>
+          <a href="https://loribank.github.io/WRF" target="_blank" class="btn btn-outline">Apri l'App <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg></a>
+        </div>
+        <div class="project-visual">
+          <div class="mockup-mobile">
+            <div class="mobile-notch"></div>
+            <div class="mobile-screen" style="background:#0a0a0a; padding:30px 15px;">
+              <div style="font-size:10px; color:#666; margin-bottom:20px;">YAMAHA WR450F</div>
+              <div style="font-size:24px; font-weight:700; margin-bottom:5px;">247 h</div>
+              <div style="font-size:12px; color:#aaa; margin-bottom:30px;">Ore motore totali</div>
+              <div style="height:4px; background:#222; border-radius:2px; margin-bottom:10px;"><div style="height:100%; width:80%; background:#fff; border-radius:2px;"></div></div>
+              <div style="font-size:10px; color:#aaa;">Prossimo Tagliando: 3h</div>
+            </div>
+          </div>
+        </div>
       </div>
-      <h3 class="proj-title">Antigravity Ladder Suite</h3>
-      <p class="proj-desc">AI che converte linguaggio naturale in logica PLC IEC 61131-3. Genera automaticamente codice ladder per Siemens LOGO! e CODESYS.</p>
-      <div class="proj-problem"><span>Problema:</span> Programmazione PLC lenta, costosa, solo per esperti</div>
-      <div class="proj-result"><span>Risultato:</span> Automazione industriale accessibile via AI</div>
-      <div class="proj-tech">
-        <span>AI/LLM</span><span>PLCopen XML</span><span>CODESYS</span><span>Siemens</span>
-      </div>
-    </div>
 
-    <div class="proj-card reveal" data-cat="web">
-      <div class="proj-glow"></div>
-      <div class="proj-header">
-        <div class="proj-cat">🌐 WEB</div>
-        <div class="proj-badge sold">VENDUTO</div>
+      <!-- Autonomous IDE -->
+      <div class="project-row reveal">
+        <div class="project-info">
+          <div class="project-meta">
+            <span class="tag">AI / Tooling</span>
+          </div>
+          <h3 class="project-name">Autonomous AI IDE</h3>
+          <p class="project-desc">Ambiente di sviluppo locale integrato con un agente AI autonomo (ReAct pattern). L'intelligenza artificiale interagisce con il file system, esegue comandi e crea codice in totale autonomia.</p>
+          <div class="project-tech">Node.js • LLM • ReAct Pattern • Git API</div>
+          <a href="https://github.com/lorenzoregazzi2007-bit" target="_blank" class="btn btn-outline">Vedi su GitHub <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg></a>
+        </div>
+        <div class="project-visual">
+          <div class="mockup-browser">
+            <div class="mockup-header">
+              <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+              <div class="mockup-url">localhost:8080</div>
+            </div>
+            <div class="mockup-body" style="background:#050505; padding:20px; font-family:monospace; color:#aaa; font-size:11px;">
+              <div style="color:#fff">> Inizializzazione agente...</div>
+              <div>> Analisi repository in corso</div>
+              <div>> Trovato bug in utils.js:L42</div>
+              <div style="color:#10b981">> Fix applicato e committato.</div>
+            </div>
+          </div>
+        </div>
       </div>
-      <h3 class="proj-title">Dominvs BJJ Website</h3>
-      <p class="proj-desc">Sito professionale per palestra di BJJ con SEO avanzato, integrazione logo, pagine multi-sede Ferrara/Rovigo. Deployato su GitHub Pages.</p>
-      <div class="proj-problem"><span>Problema:</span> Palestra senza presenza digitale professionale</div>
-      <div class="proj-result"><span>Risultato:</span> Sito live, indicizzato su Google, clienti nuovi</div>
-      <div class="proj-tech">
-        <span>HTML</span><span>CSS</span><span>SEO</span><span>GitHub Pages</span>
-      </div>
-    </div>
 
-    <div class="proj-card reveal" data-cat="ai">
-      <div class="proj-glow"></div>
-      <div class="proj-header">
-        <div class="proj-cat">🤖 AI DEVELOPER</div>
+      <!-- Antigravity Ladder -->
+      <div class="project-row reveal">
+        <div class="project-info">
+          <div class="project-meta">
+            <span class="tag">Automazione Industriale</span>
+          </div>
+          <h3 class="project-name">Antigravity Ladder Suite</h3>
+          <p class="project-desc">Traduce il linguaggio naturale in logica industriale PLC (IEC 61131-3). Automatizza la stesura del codice Ladder per Siemens LOGO! riducendo drasticamente i tempi di programmazione.</p>
+          <div class="project-tech">AI Prompting • XML • CODESYS • PLC</div>
+          <a href="https://github.com/lorenzoregazzi2007-bit" target="_blank" class="btn btn-outline">Vedi su GitHub <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg></a>
+        </div>
+        <div class="project-visual">
+           <div class="mockup-browser">
+            <div class="mockup-header">
+              <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+              <div class="mockup-url">ladder-suite.app</div>
+            </div>
+            <div class="mockup-body" style="background:#111; padding:20px;">
+              <div style="height:10px; width:40%; background:#333; margin-bottom:15px; border-radius:2px;"></div>
+              <div style="display:flex; gap:10px; margin-bottom:10px;">
+                <div style="height:30px; width:30px; border:1px solid #444; border-radius:4px;"></div>
+                <div style="height:2px; width:40px; background:#444; margin-top:14px;"></div>
+                <div style="height:30px; width:30px; border:1px solid #444; border-radius:50%;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <h3 class="proj-title">Autonomous AI IDE</h3>
-      <p class="proj-desc">IDE web-based con agente AI autonomo (ReAct pattern). L'AI esegue terminale, legge/scrive file, committa su GitHub e sviluppa codice in loop senza intervento umano.</p>
-      <div class="proj-problem"><span>Problema:</span> Sviluppo software troppo lento, troppi passaggi manuali</div>
-      <div class="proj-result"><span>Risultato:</span> Developer AI completamente autonomo</div>
-      <div class="proj-tech">
-        <span>Qwen 2.5</span><span>ReAct</span><span>Node.js</span><span>Git API</span>
-      </div>
-    </div>
 
-    <div class="proj-card reveal" data-cat="dashboard">
-      <div class="proj-glow"></div>
-      <div class="proj-header">
-        <div class="proj-cat">📊 DASHBOARD</div>
-        <div class="proj-badge sold">VENDUTO</div>
+      <!-- FIFO Simulator -->
+      <div class="project-row reveal">
+        <div class="project-info">
+          <div class="project-meta">
+            <span class="tag">Data Analysis</span>
+          </div>
+          <h3 class="project-name">FIFO Machine Simulator</h3>
+          <p class="project-desc">Simulatore per il calcolo dei tempi di produzione industriale. Elabora dataset Excel, applica logiche FIFO su macchinari a 8 posizioni e genera esportazioni dei cicli produttivi ottimizzati.</p>
+          <div class="project-tech">JavaScript • Excel.js • Data Visualization</div>
+          <a href="https://github.com/lorenzoregazzi2007-bit" target="_blank" class="btn btn-outline">Vedi su GitHub <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg></a>
+        </div>
+        <div class="project-visual">
+           <div class="mockup-browser">
+            <div class="mockup-header">
+              <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+              <div class="mockup-url">fifo-simulator.local</div>
+            </div>
+            <div class="mockup-body" style="background:#0a0a0a; padding:20px;">
+               <div style="display:flex; justify-content:space-between; margin-bottom:20px;">
+                 <div style="height:8px; width:30%; background:#222; border-radius:4px;"></div>
+                 <div style="height:8px; width:20%; background:#333; border-radius:4px;"></div>
+               </div>
+               <div style="display:grid; grid-template-columns:repeat(4, 1fr); gap:8px;">
+                 <div style="height:40px; background:#111; border-radius:4px; border:1px solid #222;"></div>
+                 <div style="height:40px; background:#111; border-radius:4px; border:1px solid #222;"></div>
+                 <div style="height:40px; background:#111; border-radius:4px; border:1px solid #222;"></div>
+                 <div style="height:40px; background:#fff; border-radius:4px;"></div>
+               </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <h3 class="proj-title">WRF Dashboard Premium</h3>
-      <p class="proj-desc">Dashboard premium per monitoraggio completo moto da competizione. Analytics avanzati, previsioni manutenzione, UI dark-mode ispirata ad Apple.</p>
-      <div class="proj-problem"><span>Problema:</span> Nessuna app professionale per piloti enduro amatoriali</div>
-      <div class="proj-result"><span>Risultato:</span> Prodotto venduto a piloti locali</div>
-      <div class="proj-tech">
-        <span>React</span><span>Vite</span><span>Firebase</span><span>Chart.js</span>
-      </div>
-    </div>
 
-    <div class="proj-card reveal" data-cat="automation">
-      <div class="proj-glow"></div>
-      <div class="proj-header">
-        <div class="proj-cat">⚙️ AUTOMAZIONE</div>
-      </div>
-      <h3 class="proj-title">FIFO Machine Simulator</h3>
-      <p class="proj-desc">Simulatore industriale per calcolo tempi uscita prodotti con logica FIFO. Import Excel, 8 posizioni macchina, 16 pezzi capacità, export risultati.</p>
-      <div class="proj-problem"><span>Problema:</span> Calcoli manuali lenti per pianificazione produzione</div>
-      <div class="proj-result"><span>Risultato:</span> Ottimizzazione automatica cicli produttivi</div>
-      <div class="proj-tech">
-        <span>JavaScript</span><span>Excel.js</span><span>FIFO Logic</span><span>Dashboard</span>
-      </div>
     </div>
-
   </div>
 </section>
 
-<!-- AI SECTION -->
-<section id="ai">
-  <div class="section-label">// 03 — AI EXPERIENCE</div>
-  <h2 class="section-title center reveal">Come uso <span class="accent">l'Intelligenza Artificiale</span></h2>
-
-  <div class="ai-terminal reveal" id="aiTerminal">
-    <div class="terminal-header">
-      <span class="t-dot red"></span><span class="t-dot yellow"></span><span class="t-dot green"></span>
-      <span class="t-title">antigravity@ai ~ prompt-engine</span>
+<!-- PROCESS -->
+<section id="process">
+  <div class="container">
+    <div class="section-header reveal">
+      <h2 class="section-title">Metodologia.</h2>
+      <p class="section-desc">Come unisco logica e creatività per sviluppare ad alta velocità.</p>
     </div>
-    <div class="terminal-body" id="terminalBody">
-      <div class="t-line"><span class="t-prompt">$</span> <span class="t-cmd">init --project "Manutenzione WR450F"</span></div>
-      <div class="t-line out">✓ Analisi requisiti completata</div>
-      <div class="t-line out">✓ Architettura definita: Firebase + PWA</div>
-      <div class="t-line"><span class="t-prompt">$</span> <span class="t-cmd">ai generate --component MaintenanceTracker</span></div>
-      <div class="t-line out">✓ Componente generato in 4.2s</div>
-      <div class="t-line"><span class="t-prompt">$</span> <span class="t-cmd">ai optimize --target performance</span></div>
-      <div class="t-line out">✓ Score: 98/100 Lighthouse</div>
-      <div class="t-line"><span class="t-prompt">$</span> <span class="t-cmd">deploy --platform github-pages</span></div>
-      <div class="t-line out success">✓ LIVE → loribank.github.io/WRF</div>
-      <div class="t-cursor">▋</div>
-    </div>
-  </div>
-
-  <div class="ai-cards reveal">
-    <div class="ai-card">
-      <div class="ai-icon">💡</div>
-      <h3>Generazione Idee</h3>
-      <p>Trasformo problemi reali in concept di prodotto usando AI come brainstorming partner</p>
-    </div>
-    <div class="ai-card">
-      <div class="ai-icon">⚡</div>
-      <h3>Sviluppo Rapido</h3>
-      <p>Prototipo in ore invece di settimane. L'AI accelera ogni fase del ciclo di sviluppo</p>
-    </div>
-    <div class="ai-card">
-      <div class="ai-icon">🔧</div>
-      <h3>Problem Solving</h3>
-      <p>Debugging intelligente, ottimizzazione algoritmi, soluzioni architetturali</p>
-    </div>
-    <div class="ai-card">
-      <div class="ai-icon">🎨</div>
-      <h3>Design & UX</h3>
-      <p>UI moderne generate e iterativamente raffinate con assistenza AI</p>
-    </div>
-    <div class="ai-card">
-      <div class="ai-icon">🤖</div>
-      <h3>Automazione</h3>
-      <p>Script, workflow, pipeline CI/CD e agenti AI autonomi</p>
-    </div>
-    <div class="ai-card">
-      <div class="ai-icon">📚</div>
-      <h3>Apprendimento</h3>
-      <p>Studio autonomo accelerato: nuove tecnologie assimilate in giorni</p>
+    
+    <div class="process-grid">
+      <div class="process-card reveal">
+        <div class="process-num">01</div>
+        <h3>Design & Architettura</h3>
+        <p>Studio l'esperienza utente e la struttura tecnica prima di scrivere codice. Utilizzo interfacce minimali e palette professionali per garantire prodotti intuitivi e premium.</p>
+      </div>
+      <div class="process-card reveal">
+        <div class="process-num">02</div>
+        <h3>Integrazione AI</h3>
+        <p>L'intelligenza artificiale non è uno strumento estetico, ma il mio copilota. Accelero il problem solving, la stesura di boilerplate e l'analisi di architetture complesse.</p>
+      </div>
+      <div class="process-card reveal">
+        <div class="process-num">03</div>
+        <h3>Sviluppo Iterativo</h3>
+        <p>Scrivo codice pulito e modulare. Faccio deploy continui su GitHub Pages, testo le soluzioni in ambienti reali (come usare l'app WRF in pista) e ottimizzo costantemente.</p>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- TIMELINE -->
 <section id="timeline">
-  <div class="section-label">// 04 — EVOLUZIONE</div>
-  <h2 class="section-title center reveal">La mia <span class="accent">timeline</span></h2>
-
-  <div class="timeline-wrap">
-    <div class="tl-line"></div>
-
-    <div class="tl-item left reveal">
-      <div class="tl-card">
-        <div class="tl-year">2023</div>
-        <h3>I Primi Passi</h3>
-        <p>Scopro HTML, CSS e JavaScript. Creo le prime pagine web. Capisco che il codice è un superpotere.</p>
-        <div class="tl-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
-      </div>
-      <div class="tl-dot"></div>
-      <div class="tl-spacer"></div>
+  <div class="container">
+    <div class="section-header reveal">
+      <h2 class="section-title">Percorso.</h2>
+      <p class="section-desc">L'evoluzione delle mie competenze tecniche.</p>
     </div>
 
-    <div class="tl-item right reveal">
-      <div class="tl-spacer"></div>
-      <div class="tl-dot"></div>
-      <div class="tl-card">
-        <div class="tl-year">2024 Q1</div>
-        <h3>Primo Progetto Reale</h3>
-        <p>Sviluppo il primo strumento utile: un tracker per la manutenzione della mia WR450F. Capisco cosa significa costruire qualcosa che si usa davvero.</p>
-        <div class="tl-tags"><span>Firebase</span><span>PWA</span></div>
+    <div class="timeline-container">
+      <div class="timeline-line"></div>
+      
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-date">Inizi</div>
+          <h3 class="timeline-title">Le Fondamenta</h3>
+          <p>Esplorazione del web moderno. Comprensione solida di HTML, CSS e JavaScript per costruire interfacce responsive e dinamiche.</p>
+        </div>
       </div>
-    </div>
 
-    <div class="tl-item left reveal">
-      <div class="tl-card">
-        <div class="tl-year">2024 Q2</div>
-        <h3>Scopro l'AI</h3>
-        <p>Inizio a usare LLM per accelerare lo sviluppo. Il mio output triplica. Creo l'Antigravity Ladder Suite per PLC industriali.</p>
-        <div class="tl-tags"><span>AI/LLM</span><span>Automazione</span></div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-date">2024 Q1 - Q2</div>
+          <h3 class="timeline-title">Costruire per il mondo reale</h3>
+          <p>Sviluppo della prima app PWA per la mia moto, integrando Firebase per il cloud storage e testando il prodotto offline in situazioni reali.</p>
+        </div>
       </div>
-      <div class="tl-dot"></div>
-      <div class="tl-spacer"></div>
-    </div>
 
-    <div class="tl-item right reveal">
-      <div class="tl-spacer"></div>
-      <div class="tl-dot"></div>
-      <div class="tl-card">
-        <div class="tl-year">2024 Q3</div>
-        <h3>Primi Progetti Venduti</h3>
-        <p>Dominvs BJJ, WRF Dashboard e altri tool vengono venduti a clienti reali. Il codice genera valore concreto.</p>
-        <div class="tl-tags"><span>💰 Revenue</span><span>Clienti reali</span></div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-date">2024 Q3</div>
+          <h3 class="timeline-title">Primi lavori commerciali</h3>
+          <p>Il codice genera valore. Sviluppo, ottimizzo per la SEO e pubblico siti professionali per attività locali, gestendo domini e deploy.</p>
+        </div>
       </div>
-    </div>
 
-    <div class="tl-item left reveal">
-      <div class="tl-card">
-        <div class="tl-year">2024 Q4</div>
-        <h3>AI Developer Autonomo</h3>
-        <p>Costruisco un IDE con agente AI autonomo che scrive, testa e committa codice senza intervento umano. Il futuro dello sviluppo.</p>
-        <div class="tl-tags"><span>ReAct</span><span>Agentic AI</span></div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-date">Oggi</div>
+          <h3 class="timeline-title">Ingegneria & AI</h3>
+          <p>Progettazione di ecosistemi autonomi, agenti AI capaci di scrivere codice e simulatori industriali complessi per macchinari automatizzati.</p>
+        </div>
       </div>
-      <div class="tl-dot"></div>
-      <div class="tl-spacer"></div>
+
     </div>
-
-    <div class="tl-item right reveal">
-      <div class="tl-spacer"></div>
-      <div class="tl-dot"></div>
-      <div class="tl-card tl-now">
-        <div class="tl-year">2025 <span class="now-badge">ORA</span></div>
-        <h3>Capolavoro</h3>
-        <p>Portfolio di 24+ progetti, tecnologie enterprise, AI avanzata. Pronto per il mondo reale.</p>
-        <div class="tl-tags"><span>🚀 Next Level</span></div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- WALL OF PROJECTS -->
-<section id="wall">
-  <div class="section-label">// 05 — WALL OF PROJECTS</div>
-  <h2 class="section-title center reveal">Tutto ciò che ho <span class="accent">costruito</span></h2>
-  <p class="section-sub reveal">Una vista d'insieme della mia produttività.</p>
-
-  <div class="wall-grid reveal">
-    <div class="wall-item" data-glow="blue"><span class="wi-icon">🏍️</span><span>WRF Tracker</span></div>
-    <div class="wall-item" data-glow="purple"><span class="wi-icon">🤖</span><span>Ladder AI</span></div>
-    <div class="wall-item lg" data-glow="blue"><span class="wi-icon">🌐</span><span>Dominvs BJJ Site</span></div>
-    <div class="wall-item" data-glow="cyan"><span class="wi-icon">📊</span><span>FIFO Simulator</span></div>
-    <div class="wall-item" data-glow="purple"><span class="wi-icon">💻</span><span>Autonomous IDE</span></div>
-    <div class="wall-item lg" data-glow="blue"><span class="wi-icon">📱</span><span>WRF Dashboard</span></div>
-    <div class="wall-item" data-glow="cyan"><span class="wi-icon">⚙️</span><span>PLC Generator</span></div>
-    <div class="wall-item" data-glow="purple"><span class="wi-icon">🔥</span><span>Firebase Sync</span></div>
-    <div class="wall-item" data-glow="blue"><span class="wi-icon">🎨</span><span>UI System</span></div>
-    <div class="wall-item lg" data-glow="cyan"><span class="wi-icon">🤖</span><span>AI Prompt Engine</span></div>
-    <div class="wall-item" data-glow="purple"><span class="wi-icon">📈</span><span>Analytics Tool</span></div>
-    <div class="wall-item" data-glow="blue"><span class="wi-icon">🚀</span><span>Deploy Pipeline</span></div>
-    <div class="wall-item" data-glow="cyan"><span class="wi-icon">🔧</span><span>Dev Tools</span></div>
-    <div class="wall-item lg" data-glow="purple"><span class="wi-icon">🏭</span><span>Industrial Automation</span></div>
-    <div class="wall-item" data-glow="blue"><span class="wi-icon">📋</span><span>SEO Optimizer</span></div>
-    <div class="wall-item" data-glow="cyan"><span class="wi-icon">⚡</span><span>PWA Builder</span></div>
   </div>
 </section>
 
 <!-- FINALE -->
 <section id="finale">
-  <div class="finale-content">
-    <div class="finale-orbs">
-      <div class="forb f1"></div>
-      <div class="forb f2"></div>
-      <div class="forb f3"></div>
+  <div class="container text-center">
+    <h2 class="finale-title reveal">La tecnologia si nota<br>solo quando risolve un problema.</h2>
+    <p class="finale-desc reveal">Loribank • Portfolio 2026</p>
+    <div class="finale-actions reveal">
+      <a href="#projects" class="btn btn-primary">Rivedi i Lavori</a>
+      <a href="https://github.com/lorenzoregazzi2007-bit" target="_blank" class="btn btn-outline">Visita GitHub</a>
     </div>
-    <p class="finale-label reveal">— CONCLUSIONE —</p>
-    <h2 class="finale-title reveal">
-      La tecnologia diventa<br>
-      <span class="accent">straordinaria</span><br>
-      quando qualcuno decide<br>
-      di <span class="accent">creare.</span>
-    </h2>
-    <p class="finale-sub reveal">E io ho deciso di creare.</p>
-    <div class="finale-sig reveal">Loribank • 2026</div>
   </div>
 </section>
 
